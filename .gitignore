@@ -1,0 +1,5 @@
+*.pyc
+*.DS_Store
+evm/
+scripts/tokensNotification.py
+scripts/tokensSQL.py
