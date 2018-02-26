@@ -3,3 +3,5 @@
 evm/
 scripts/tokensNotification.py
 scripts/tokensSQL.py
+scripts/.ipynb_checkpoints
+scripts/Compare Bnk.ipynb
