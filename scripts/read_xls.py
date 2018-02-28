@@ -52,8 +52,8 @@ def readXls(fileX,bkn,dates,sheetname):
             #print (str(i) + '.- ' + ' Id_Oper :'+ value)
     message += "################################################################\n"
     title = 'Cuenta analizada : ' + str(bkn)
-    send_notification(title,'a.aguilar@fortaingenieria.com',message)
-    send_notification(title,'administracion@fortaingenieria.com',message)
+    send_notification(title,emailnotification1,message)
+    send_notification(title,emailnotification2,message)
 ################################################################################
 ##                                                                            ##
 ##                                  Test Here code                            ##
