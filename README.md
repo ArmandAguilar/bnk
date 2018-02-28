@@ -26,4 +26,4 @@
 
 
 
-![How is works](https://github.com/ArmandAguilar/JsonToMSSQL/blob/master/Diagram/JsonToMSSQL.png)
+![How is works](https://github.com/ArmandAguilar/bnk/blob/master/Diagrama/Diagrama.png)
