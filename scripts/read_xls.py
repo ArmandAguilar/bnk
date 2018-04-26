@@ -60,8 +60,8 @@ def readXls(fileX,bkn,dates,sheetname):
         #send_notification(title,emailnotification1,message)
         #send_notification(title,emailnotification2,message)
         txt = 'Registros faltantes en bancos'
-        IdTeamWorkUsersList = '216004'
-        #IdTeamWorkUsersList = '216004,270823,259573'
+        #IdTeamWorkUsersList = '216004'
+        IdTeamWorkUsersList = '216004,270823,215992'
         send_private_messaje(title=txt,IdTeamWorkUsers=IdTeamWorkUsersList,IdTeamWorkProject='418014',message=message,notify=IdTeamWorkUsersList)
 
 ################################################################################
