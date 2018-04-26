@@ -6,7 +6,9 @@ import pandas as pd
 #other lib and toke to use
 from tokensSQL import *
 from tokensNotification import *
+from tokensTeamWork import *
 from notifications import *
+from teamworkmessage import *
 import pypyodbc as pyodbc
 import pymssql
 
@@ -37,7 +39,8 @@ def readXls(fileX,bkn,dates,sheetname):
     listXLS = list_xls(fileX,sheetname)
     listSQL = list_bnk(bkn,dates)
     i = 0
-    message = '################################################################\n'
+    message = 'Hola examiando la base de datos encontre operaciones bancarias que no estan registradas te muestro un listado\n'
+    message += '################################################################\n'
     message += '\t Registros faltantes de  la cuenta : ' + str(bkn) + '\n'
     message += '################################################################\n'
     #print('Id_opers do not found in SQL SERVER')
@@ -50,10 +53,17 @@ def readXls(fileX,bkn,dates,sheetname):
             i = 1 + i
             message += str(i) + '.- ' + ' Id_Oper :'+ value + '\n'
             #print (str(i) + '.- ' + ' Id_Oper :'+ value)
-    message += "################################################################\n"
+    message += "################################################################\n\n"
+    message += "Saludos .\n"
     title = 'Cuenta analizada : ' + str(bkn)
-    send_notification(title,emailnotification1,message)
-    send_notification(title,emailnotification2,message)
+    if i > 0:
+        #send_notification(title,emailnotification1,message)
+        #send_notification(title,emailnotification2,message)
+        txt = 'Registros faltantes en bancos'
+        IdTeamWorkUsersList = '216004'
+        #IdTeamWorkUsersList = '216004,270823,259573'
+        send_private_messaje(title=txt,IdTeamWorkUsers=IdTeamWorkUsersList,IdTeamWorkProject='418014',message=message,notify=IdTeamWorkUsersList)
+
 ################################################################################
 ##                                                                            ##
 ##                                  Test Here code                            ##
